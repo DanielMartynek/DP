@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+
+{%load static %}
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"
+            integrity="sha512-Hn1w6YiiFw6p6S2lXv6yKeqTk0PLVzeCwWY9n32beuPjQ5HLcvz5l2QsP+KilEr1ws37rCTw3bZpvfvVIeTh0Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!--MIT LICENCE-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{%static 'css/results.css'%}" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+<div class="bodyclass">
+  <div class = "left_side" >
+
+          <div class="acceleration">
+            <div class="acc_left">
+
+
+                <canvas id="acc_left_foot" ></canvas>
+
+
+
+
+            </div>
+            <div class = "acc_right">
+                <canvas id="acc_right_foot" ></canvas>
+            </div>
+          </div>
+          <div class="FFT">
+              <div class="FFT_left">
+                <canvas id="FFT_left_foot" ></canvas>
+
+
+            </div>
+            <div class = "FFT_right">
+                <canvas id="FFT_right_foot" ></canvas>
+            </div>
+
+          </div>
+
+      </div>
+
+
+
+
+<div class = right_side>
+CLASSIFICATION
+
+
+
+</div>
+</div>
+</body>
+
+
+
+
+<script>
+const xValues1 ={{time_L}}
+const yValues1 ={{acc_L}}
+const xValues2 ={{time_R}}
+const yValues2 ={{acc_R}}
+
+var option = {
+  type: "line",
+  data: {
+    labels: xValues1,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1)",
+      borderColor: "rgba(0,0,255,1)",
+      data: yValues1
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    responsive: true,
+    animation: {
+        duration: 0
+    },
+    elements: {
+        point:{
+            radius: 0
+        }
+    },
+
+    scales: {
+        y: {
+          title: {
+            display: true,
+            text: 'Acceleration [m/s^2]'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Time [s]'
+          }
+        }
+
+    },
+        plugins:{
+            legend:false,
+            title:{
+
+                display:true,
+                text:"Acceleration Left Leg"
+            }
+        }
+  }
+}
+var option2 = {
+  type: "line",
+  data: {
+    labels: xValues2,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1)",
+      borderColor: "rgba(0,0,255,1)",
+      data: yValues2
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    responsive: true,
+    animation: {
+        duration: 0
+    },
+    elements: {
+        point:{
+            radius: 0
+        }
+    },
+
+    scales: {
+        y: {
+          title: {
+            display: true,
+            text: 'Acceleration [m/s^2]'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Time [s]'
+          }
+        }
+
+    },
+        plugins:{
+            legend:false,
+            title:{
+                display:true,
+                text:"Acceleration Right Leg"
+            }
+
+        }
+  }
+}
+var ctx = document.getElementById('acc_left_foot').getContext('2d');
+var ctx2 = document.getElementById('acc_right_foot').getContext('2d');
+new Chart(ctx, option);
+new Chart(ctx2, option2);
+
+
+const xValues3 ={{f_L}}
+const yValues3 ={{fft_L}}
+const xValues4 = {{f_R}}
+const yValues4 ={{fft_R}}
+
+var option3 = {
+  type: "line",
+  data: {
+    labels: xValues3,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1)",
+      borderColor: "rgba(0,0,255,1)",
+      data: yValues3
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    responsive: true,
+    animation: {
+        duration: 0
+    },
+    elements: {
+        point:{
+            radius: 0
+        }
+    },
+
+    scales: {
+        y: {
+          title: {
+            display: true,
+            text: 'Acceleration [m/s^2]'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Time [s]'
+          }
+        }
+
+    },
+        plugins:{
+            legend:false,
+            title:{
+
+                display:true,
+                text:"Acceleration Left Leg"
+            }
+        }
+  }
+}
+var option4 = {
+  type: "line",
+  data: {
+    labels: xValues4,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1)",
+      borderColor: "rgba(0,0,255,1)",
+      data: yValues4
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    responsive: true,
+    animation: {
+        duration: 0
+    },
+    elements: {
+        point:{
+            radius: 0
+        }
+    },
+
+    scales: {
+        y: {
+          title: {
+            display: true,
+            text: 'Acceleration [m/s^2]'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Time [s]'
+          }
+        }
+
+    },
+        plugins:{
+            legend:false,
+            title:{
+                display:true,
+                text:"Acceleration Right Leg"
+            }
+
+        }
+  }
+}
+var ctx3 = document.getElementById('FFT_left_foot').getContext('2d');
+var ctx4 = document.getElementById('FFT_right_foot').getContext('2d');
+new Chart(ctx3, option3);
+new Chart(ctx4, option4);
+
+
+
+
+
+</script>
+
+
+
+</html>

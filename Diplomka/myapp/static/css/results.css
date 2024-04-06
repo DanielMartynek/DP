@@ -1,0 +1,63 @@
+body{
+    background:#FF5733;
+    flex-direction: column;
+
+}
+.bodyclass{
+display: flex;
+flex: 1;
+
+}
+
+.left_side{
+background-color: orange;
+width: 50vw;
+}
+
+.right_side{
+background-color: white;
+width: 50vw;
+
+}
+
+.acceleration{
+background-color: yellow;
+display: flex;
+flex: 1;
+width: 50vw;
+height: 50vh;
+}
+.acc_left{
+background-color: white;
+width: 50%;
+height:100%;
+
+}
+.acc_right{
+background-color: white;
+width: 50%;
+height:100%;
+
+}
+
+.FFT{
+background-color: darkgreen;
+display: flex;
+flex: 1;
+width: 50vw;
+height: 50vh
+}
+
+.FFT_left{
+background-color: white;
+width: 50%;
+height:100%;
+}
+
+.FFT_right{
+background-color: white;
+width: 50%;
+height:100%;
+}
+
+

@@ -1,0 +1,94 @@
+
+body{
+    background:#FF5733;
+    flex-direction: column;
+
+}
+.top_bar{
+    background-color: yellow;
+    height:10vh;
+
+}
+.form-control-flex{
+    display: flex;
+    flex: 1;
+
+}
+.choose_folder{
+    padding-right: 10vw;
+    padding-left: 30vw;
+
+}
+.send_folder{
+
+
+
+}
+.down_section{
+    height: 90vh;
+    display: flex;
+    flex: 1
+}
+
+
+.exercise_picture{
+ height: 100%;
+ width: 100%; /* ie8 */
+
+
+}
+
+.left_bar{
+    width: 20vw;
+
+    background-color: red;
+
+
+}
+.main{
+    width: 70vw;
+    display: flex;
+    flex: 1;
+    background-color: green;
+
+}
+.main_left{
+    width: 70%;
+    height: 100%;
+    background-color: IndianRed;
+
+
+}
+.exercise_gif{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 30%;
+}
+.acc_graphs{
+    height: 60%;
+    display: flex;
+    flex: 1
+
+}
+.left_foot_graph{
+width:50%;
+max-width:50%;
+height:100%;
+background-color: rgba(255, 255, 255, 1);
+
+}
+.right_foot_graph{
+width:50%;
+max-width:50%;
+height:100%;
+background-color: rgba(255, 255, 255, 1);
+
+
+}
+.main_right{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
